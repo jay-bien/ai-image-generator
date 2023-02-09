@@ -8,14 +8,29 @@ import { CreatePost, Home } from './pages';
 function App() {
   const [count, setCount] = useState(0)
 
+
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
-      <header ></header>
-        <Link to="/">
+      <header >
+
+      <nav>
+      <Link to="/">
           <div className='logo'></div>
         </Link>
-        <Link to="/create-post">Create A New Post</Link>
+        
+         
+                    <ul>
+                        <li>
+
+                        </li>
+                        <li>
+                        <Link to="/create-post">Create A New Post</Link>
+                        </li>
+                    </ul>
+     </nav>
+      </header>
+
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/create-post" element={<CreatePost/>}></Route>
