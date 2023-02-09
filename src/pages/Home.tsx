@@ -4,7 +4,18 @@ import { useState, useEffect } from "react";
 const Home = ( )=> {
 
     const [posts, setPosts ] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    const [ loading, setLoading ] = useState( false );
 
+    useEffect(()=>{
+        setLoading( true );
+
+        setTimeout( ()=>{
+            setLoading( false);
+        }, 2000)
+        return ()=>{
+
+        }
+    }, [])
     return(
         <div >
             <div className="home-header">
@@ -18,6 +29,10 @@ const Home = ( )=> {
                     <label for="search">Search Images</label>
                     <input name="search" className="search" id="search"></input>
                 </div>
+                {
+                    loading 
+                    ? <div>Loading!!</div>
+                    : (
                 <section className="posts">
                     { posts && posts.map( post => (
                         <div className="card">
@@ -26,6 +41,7 @@ const Home = ( )=> {
                     ) )}
 
                 </section>
+                    )}
             </main>
             
         </div>
