@@ -15,7 +15,9 @@ const Home = ( )=> {
         return ()=>{
 
         }
-    }, [])
+    }, []);
+
+
     return(
         <div >
             <div className="home-header">
@@ -26,8 +28,10 @@ const Home = ( )=> {
             </div>
             <main>
                 <div className="search">
-                    <label for="search">Search Images</label>
-                    <input name="search" className="search" id="search"></input>
+                    <form>
+                        <label htmlFor="search">Search Images</label>
+                        <input name="search" className="search" id="search"></input>
+                    </form>
                 </div>
                 {
                     loading 
