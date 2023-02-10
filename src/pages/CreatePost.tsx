@@ -20,15 +20,26 @@ const CreatePost = ( )=> {
     }
     return(
         <div>
-            <h1>Create Post</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium aliquid quia soluta non et, error consequatur ducimus, praesentium autem qui natus ut libero voluptatibus cum recusandae, optio enim vero numquam.</p>
+            <div className="header">
+            <h1>Text to Image AI Image Generator</h1>
+            <p>
+Use your words to bring an image to life by leveraging the power of AI using this text prompt.
+The more descriptive you are about what you want, the better the results will be.
+            </p>
+            </div>
+
             <p>{form.prompt}</p>
             <section>
                     <form onSubmit={handleSubmit}>
-                        <label htmlFor="name">Your Name</label>
-                        <input onChange={ onChangeInput } name="name"></input>
-                        <label htmlFor="prompt">Your Prompt</label>
-                        <input onChange={ onChangeInput } name="prompt"></input>
+                        <div>
+                            <label htmlFor="name">Your Name</label>
+                            <input onChange={ onChangeInput } name="name"></input>
+                        </div>
+                        <div>    
+                            <label htmlFor="prompt">Your Prompt</label>
+                            <input onChange={ onChangeInput } name="prompt"></input>
+                        </div>
+
                         <button type="submit">Generate Image</button>
                     </form>
             </section>
