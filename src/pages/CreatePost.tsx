@@ -25,7 +25,9 @@ const CreatePost = ( )=> {
             <p>{form.prompt}</p>
             <section>
                     <form onSubmit={handleSubmit}>
+                        <label htmlFor="name">Your Name</label>
                         <input onChange={ onChangeInput } name="name"></input>
+                        <label htmlFor="prompt">Your Prompt</label>
                         <input onChange={ onChangeInput } name="prompt"></input>
                         <button type="submit">Generate Image</button>
                     </form>
